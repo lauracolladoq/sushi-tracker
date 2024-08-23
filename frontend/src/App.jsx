@@ -1,21 +1,39 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import './App.css'
 
 function App() {
   const [count, setCount] = useState(0)
+  const [endGame, setEndGame] = useState(false)
+
+  useEffect(() => {
+    if (endGame) {
+      alert('Game Over, your count is ${count}')
+      setCount(0)
+    }
+  }, [endGame])
+
+  function handleIncrementer() {
+    setCount((count) => count + 1)
+  }
+
+  function handleDecrementer() {
+    if (count > 0) {
+      setCount((count) => count - 1)
+    }
+  }
 
   return (
     <>
       <div className="counter">
-        <button onClick={() => setCount((count) => count + 1)}>
-          +1 
+        <button onClick={handleIncrementer}>
+          +1
         </button>
         {count}
-        <button onClick = {() => setCount((count) => count - 1)}>
+        <button onClick={handleDecrementer}>
           -1
         </button>
-        <button onClick = {() => setCount(0)}>
-          New Game
+        <button onClick={setEndGame(true)}>
+          End Game
         </button>
       </div>
     </>
