@@ -1,34 +1,26 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useContext } from 'react'
+import { CounterContext } from '../contexts/CounterContext'
 
 export function Counter() {
-    const [count, setCount] = useState(0)
+    const { globalCount, incrementGlobalCount, decrementGlobalCount, setGlobalCount } = useContext(CounterContext);
     const [endGame, setEndGame] = useState(false)
     const [restartGame, setRestartGame] = useState(false)
 
     useEffect(() => {
         if (endGame) {
-            alert(`Game Over, your count is ${count}`)
-            setCount(0)
+            alert(`Game Over, your count is ${globalCount}`)
+            setGlobalCount(0)
             setEndGame(false)
         }
-    }, [endGame])
+    }, [endGame, globalCount, setGlobalCount])
 
     useEffect(() => {
         if (restartGame) {
-            setCount(0)
+            setGlobalCount(0)
             setRestartGame(false)
         }
-    })
+    }, [restartGame, setGlobalCount])
 
-    function handleIncrementer() {
-        setCount((count) => count + 1)
-    }
-
-    function handleDecrementer() {
-        if (count > 0) {
-            setCount((count) => count - 1)
-        }
-    }
     return (
         <div>
             <h1 className="text-4xl font-bold text-center">SUSHI COUNTER</h1>
@@ -47,13 +39,13 @@ export function Counter() {
             </div>
             {/* Counter */}
             <div className="flex gap-5 mt-4 border rounded-xl justify-center py-4" >
-                <button onClick={handleDecrementer}>
+                <button onClick={decrementGlobalCount}>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-10 bg-salmon bg-opacity-70 rounded-full">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14" />
                     </svg>
                 </button>
-                <span className='font-bold text-9xl'>{count}</span>
-                <button onClick={handleIncrementer} >
+                <span className='font-bold text-9xl'>{globalCount}</span>
+                <button onClick={incrementGlobalCount} >
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-10 bg-salmon bg-opacity-70 rounded-full">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
                     </svg>

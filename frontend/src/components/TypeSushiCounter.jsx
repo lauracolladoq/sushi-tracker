@@ -1,17 +1,19 @@
 /* eslint-disable react/prop-types */
-import { useState } from 'react';
+import { useState, useContext } from 'react';
+import { CounterContext } from '../contexts/CounterContext';
 
 export function TypeSushiCounter({ name, img }) {
     const [count, setCount] = useState(0);
+    const { incrementGlobalCount, decrementGlobalCount } = useContext(CounterContext);
 
-    function handleIncrementer() {
-        setCount((count) => count + 1);
+    const handleIncrementer = () => {
+        setCount(count + 1);
+        incrementGlobalCount();
     }
 
-    function handleDecrementer() {
-        if (count > 0) {
-            setCount((count) => count - 1);
-        }
+    const handleDecrementer = () => {
+        setCount(count > 0 ? count - 1 : 0);
+        decrementGlobalCount();
     }
 
     return (
