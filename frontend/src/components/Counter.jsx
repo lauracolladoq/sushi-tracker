@@ -22,7 +22,7 @@ export function Counter() {
     }, [restartGame, resetCounters])
 
     return (
-        <div>
+        <div className='md:w-1/2 m-auto'>
             <h1 className="text-4xl font-bold text-center">SUSHI COUNTER</h1>
             {/* Icons */}
             <div className='flex gap-3 justify-end mt-4'>
@@ -52,7 +52,7 @@ export function Counter() {
                 </button>
             </div>
             {/* End Game Button */}
-            <button onClick={() => setEndGame(true)} className='bg-black rounded-xl w-full py-3 mt-4 text-white font-medium'>
+            <button onClick={() => setEndGame(true)} className='bg-black rounded-xl py-3 mt-4 text-white font-medium w-full'>
                 End Game!
             </button>
         </div>

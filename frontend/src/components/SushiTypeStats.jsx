@@ -51,7 +51,7 @@ export function SushiTypeStats() {
     return (
         <div className=' mt-8 border rounded-xl text-center p-4 '>
             <span className='text-xl font-bold uppercase'>Specific Sushi Counter</span>
-            <div className='grid grid-cols-2 gap-4'>
+            <div className='grid grid-cols-2 md:grid-cols-5 gap-4'>
                 {tipos.map(el => (
                     <TypeSushiCounter key={el.id} name={el.name} img={el.img} />
                 ))}
