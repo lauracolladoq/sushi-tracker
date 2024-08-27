@@ -1,10 +1,19 @@
 /* eslint-disable react/prop-types */
-import { useState, useContext } from 'react';
+import { useState, useContext, useEffect } from 'react';
 import { CounterContext } from '../contexts/CounterContext';
 
 export function TypeSushiCounter({ name, img }) {
     const [count, setCount] = useState(0);
-    const { incrementGlobalCount, decrementGlobalCount } = useContext(CounterContext);
+    const { incrementGlobalCount, decrementGlobalCount, reset, clearReset } = useContext(CounterContext);
+
+    // Resetea el contador de un tipo de sushi cuando se resetean todos los contadores
+    useEffect(() => {
+        if (reset) {
+            setCount(0);
+            // Limpia el estado de reset
+            clearReset();
+        }
+    }, [reset, clearReset]);
 
     const handleIncrementer = () => {
         setCount(count + 1);
@@ -12,8 +21,10 @@ export function TypeSushiCounter({ name, img }) {
     }
 
     const handleDecrementer = () => {
-        setCount(count > 0 ? count - 1 : 0);
-        decrementGlobalCount();
+        if (count > 0){
+            decrementGlobalCount();
+            setCount(count - 1);
+        }
     }
 
     return (

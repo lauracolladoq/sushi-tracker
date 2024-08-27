@@ -2,24 +2,24 @@ import { useEffect, useState, useContext } from 'react'
 import { CounterContext } from '../contexts/CounterContext'
 
 export function Counter() {
-    const { globalCount, incrementGlobalCount, decrementGlobalCount, setGlobalCount } = useContext(CounterContext);
+    const { globalCount, incrementGlobalCount, decrementGlobalCount, resetCounters } = useContext(CounterContext);
     const [endGame, setEndGame] = useState(false)
     const [restartGame, setRestartGame] = useState(false)
 
     useEffect(() => {
         if (endGame) {
             alert(`Game Over, your count is ${globalCount}`)
-            setGlobalCount(0)
+            resetCounters()
             setEndGame(false)
         }
-    }, [endGame, globalCount, setGlobalCount])
+    }, [endGame, globalCount, resetCounters])
 
     useEffect(() => {
         if (restartGame) {
-            setGlobalCount(0)
+            resetCounters()
             setRestartGame(false)
         }
-    }, [restartGame, setGlobalCount])
+    }, [restartGame, resetCounters])
 
     return (
         <div>
