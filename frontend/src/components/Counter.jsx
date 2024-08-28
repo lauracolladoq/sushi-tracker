@@ -39,20 +39,20 @@ export function Counter() {
             </div>
             {/* Counter */}
             <div className="flex gap-5 mt-4 border rounded-xl justify-center py-4" >
-                <button onClick={decrementGlobalCount}>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-10 bg-salmon bg-opacity-70 rounded-full">
+                <button onClick={decrementGlobalCount} >
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-10 bg-blue-300 rounded-full">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14" />
                     </svg>
                 </button>
                 <span className='font-bold text-9xl'>{globalCount}</span>
                 <button onClick={incrementGlobalCount} >
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-10 bg-salmon bg-opacity-70 rounded-full">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-10 bg-blue-300 rounded-full">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
                     </svg>
                 </button>
             </div>
             {/* End Game Button */}
-            <button onClick={() => setEndGame(true)} className='bg-black rounded-xl py-3 mt-4 text-white font-medium w-full'>
+            <button onClick={() => setEndGame(true)} className='bg-blue-300 hover:bg-blue-400 font-semibold rounded-xl py-3 mt-4 text-white drop-shadow-lg w-full'>
                 End Game!
             </button>
         </div>

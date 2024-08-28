@@ -1,0 +1,96 @@
+{
+    "users": [
+        {
+            "id": "1",
+            "username": "test",
+            "name": "Test Testing",
+            "email": "test@example.com",
+            "passwordHash": "hashed_password_example",
+            "profilePicture": "./src/assets/react.svg"
+        }
+    ],
+    "counters": [
+        {
+            "id": "1",
+            "userId": "1",
+            "totalConsumption": 120,
+            "sushiTypes": [
+                {
+                    "id": "1",
+                    "name": "Maki",
+                    "quantity": 2
+                }
+            ]
+        }
+    ],
+    "history": [
+        {
+            "id": "1",
+            "counterId": "1",
+            "userId": "1",
+            "date": "2024-08-25",
+            "totalConsumption": 5,
+            "sushiTypes": [
+                {
+                    "id": "1",
+                    "name": "Maki",
+                    "quantity": 2
+                }
+            ]
+        }
+    ],
+    "podium": [
+        {
+            "id": "1",
+            "username": "test",
+            "totalConsumption": 120
+        }
+    ],
+    "sushiTypes": [
+        {
+            "id": "1",
+            "name": "Maki",
+            "img": "./src/assets/maki.svg"
+        },
+        {
+            "id": "2",
+            "name": "Uramaki",
+            "img": "./src/assets/uramaki.svg"
+        },
+        {
+            "id": "3",
+            "name": "Nigiri",
+            "img": "./src/assets/nigiri.svg"
+        },
+        {
+            "id": "4",
+            "name": "Sashimi",
+            "img": "./src/assets/sashimi.svg"
+        },
+        {
+            "id": "5",
+            "name": "Futomaki",
+            "img": "./src/assets/futomaki.svg"
+        },
+        {
+            "id": "6",
+            "name": "Temaki",
+            "img": "./src/assets/temaki.svg"
+        },
+        {
+            "id": "7",
+            "name": "Gunkan",
+            "img": "./src/assets/gunkan.svg"
+        },
+        {
+            "id": "8",
+            "name": "Onigiri",
+            "img": "./src/assets/onigiri.svg"
+        },
+        {
+            "id": "9",
+            "name": "Other",
+            "img": "./src/assets/other.svg"
+        }
+    ]
+}

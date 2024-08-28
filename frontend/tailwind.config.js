@@ -6,9 +6,6 @@ export default {
   ],
   theme: {
     extend: {
-      colors: {
-        'salmon': '#FA7669',
-      }
     },
   },
   plugins: [],
