@@ -1,8 +1,10 @@
 import { NavLink } from 'react-router-dom';
+import { DarkModeToggle } from './DarkModeToggle';
+
 
 export function Menu() {
     return (
-        <div className="border rounded-full flex gap-3 sticky inset-x-0 bottom-3 m-auto bg-white w-fit">
+        <div className="border rounded-full flex gap-3 sticky inset-x-0 bottom-3 m-auto bg-white dark:bg-dark-color w-fit">
             <NavLink to="/record" className={({ isActive }) => (isActive ? 'p-2 m-1 bg-blue-300 rounded-full' : 'p-3')}>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-8 bg-transparent">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
@@ -23,11 +25,7 @@ export function Menu() {
                     <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
                 </svg>
             </NavLink>
-            <button className="p-3">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-8 bg-transparent">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" />
-                </svg>
-            </button>
+            <DarkModeToggle/>
         </div>
     );
 }

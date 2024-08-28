@@ -1,6 +1,6 @@
 export function Register() {
     return (
-        <div className="m-8">
+        <div>
             <h1 className="text-2xl font-bold text-center">CREATE AN ACCOUNT!</h1>
             <div className="flex flex-col gap-4 pt-4">
                 <div className="flex gap-3 p-4 bg-gray-100 rounded-full">
@@ -57,13 +57,13 @@ export function Register() {
                 </div>
                 <div className="flex gap-4 justify-center">
                     <div className="border rounded-full p-4 ">
-                        <img src="/src/assets/google.png" alt="Google Icon" />
+                        <img src="/src/assets/social-media/google.png" alt="Google Icon" />
                     </div>
                     <div className="border rounded-full p-4 ">
-                        <img src="/src/assets/github.png" alt="GitHub Icon" />
+                        <img src="/src/assets/social-media/github.png" alt="GitHub Icon" />
                     </div>
                     <div className="border rounded-full p-4">
-                        <img src="/src/assets/facebook.png" alt="Facebook Icon" />
+                        <img src="/src/assets/social-media/facebook.png" alt="Facebook Icon" />
                     </div>
                 </div>
             </div>

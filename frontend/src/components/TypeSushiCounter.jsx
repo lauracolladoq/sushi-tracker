@@ -39,7 +39,7 @@ export function TypeSushiCounter({ name, img }) {
                             viewBox="0 0 24 24"
                             strokeWidth={1.5}
                             stroke="currentColor"
-                            className="w-5 h-5 bg-black text-white rounded-full"
+                            className="w-5 h-5 bg-black dark:bg-white dark:text-black text-white rounded-full"
                         >
                             <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14" />
                         </svg>
@@ -52,7 +52,7 @@ export function TypeSushiCounter({ name, img }) {
                             viewBox="0 0 24 24"
                             strokeWidth={1.5}
                             stroke="currentColor"
-                            className="w-5 h-5 bg-black text-white rounded-full"
+                            className="w-5 h-5 bg-black text-white  dark:bg-white dark:text-black rounded-full"
                         >
                             <path
                                 strokeLinecap="round"

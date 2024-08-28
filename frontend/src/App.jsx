@@ -4,14 +4,11 @@ import { SushiTypeStats } from './components/SushiTypeStats.jsx'
 import { CounterProvider } from './contexts/CounterContext.jsx'
 import {Menu} from './components/Menu.jsx'
 
-
 function App() {
   return (
-    <CounterProvider>
-      <div className='m-8'>
+    <CounterProvider className="dark:bg-gray-900">
         <Counter />
         <SushiTypeStats />
-      </div>
       <Menu/>
     </CounterProvider>
   )

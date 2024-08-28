@@ -1,6 +1,6 @@
 export function Login() {
     return (
-        <div className="m-8">
+        <div>
             <h1 className="text-4xl font-bold text-center">WELCOME BACK!</h1>
             <p className="text-gray-500 text-center pt-4">Please enter your credentials to access your account.</p>
             <div className="flex flex-col gap-4 pt-4">
@@ -31,15 +31,15 @@ export function Login() {
                     <hr className="w-full bg-gray-500 h-[2px]" />
                 </div>
                 <div className="border rounded-full p-4 flex justify-center gap-4">
-                    <img src="/src/assets/google.png" alt="" />
+                    <img src="/src/assets/social-media/google.png" alt="" />
                     <p>Login with <span className="font-semibold">Google</span></p>
                 </div>
                 <div className="border rounded-full p-4 flex justify-center gap-4">
-                    <img src="/src/assets/github.png" alt="" />
+                    <img src="/src/assets/social-media/github.png" alt="" />
                     <p>Login with <span className="font-semibold">GitHub</span></p>
                 </div>
                 <div className="border rounded-full p-4 flex justify-center gap-4">
-                    <img src="/src/assets/facebook.png" alt="" />
+                    <img src="/src/assets/social-media/facebook.png" alt="" />
                     <p>Login with <span className="font-semibold">Facebook</span></p>
                 </div>
             </div>
