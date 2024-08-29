@@ -4,7 +4,7 @@ import { DarkModeToggle } from './DarkModeToggle';
 
 export function Menu() {
     return (
-        <div className="border rounded-full flex gap-3 sticky inset-x-0 bottom-3 m-auto bg-white dark:bg-dark-color w-fit">
+        <div className="border rounded-full flex gap-3 sticky inset-x-0 bottom-3 m-auto bg-white dark:bg-dark-color">
             <NavLink to="/record" className={({ isActive }) => (isActive ? 'p-2 m-1 bg-blue-300 rounded-full' : 'p-3')}>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-8 bg-transparent">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
